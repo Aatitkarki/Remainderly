@@ -20,32 +20,35 @@ class HomePage extends StatelessWidget {
                       margin: EdgeInsets.only(bottom: 20),
                       child: Image(image: AssetImage("asset/images/logo.png"))),
                   Expanded(
-                    child: ListView(
-                      children: [
-                        TaskCardWidget(
-                          title: "First Task Title ",
-                          description:
-                              "This is the description of the task which is unfinished. This task has to be done quickly.",
-                        ),
-                        TaskCardWidget(
-                          title: "Second Task Title ",
-                        ),
-                        TaskCardWidget(
-                          title: "Third Task Title ",
-                        ),
-                        TaskCardWidget(
-                          title: "Fourth Task Title ",
-                        ),
-                        TaskCardWidget(
-                          title: "Fifth Task Title ",
-                        ),
-                        TaskCardWidget(
-                          title: "Sixth Task Title ",
-                        ),
-                        TaskCardWidget(
-                          title: "Seventh Task Title ",
-                        ),
-                      ],
+                    child: ScrollConfiguration(
+                      behavior: NoGlowBehaviour(),
+                      child: ListView(
+                        children: [
+                          TaskCardWidget(
+                            title: "First Task Title ",
+                            description:
+                                "This is the description of the task which is unfinished. This task has to be done quickly.",
+                          ),
+                          TaskCardWidget(
+                            title: "Second Task Title ",
+                          ),
+                          TaskCardWidget(
+                            title: "Third Task Title ",
+                          ),
+                          TaskCardWidget(
+                            title: "Fourth Task Title ",
+                          ),
+                          TaskCardWidget(
+                            title: "Fifth Task Title ",
+                          ),
+                          TaskCardWidget(
+                            title: "Sixth Task Title ",
+                          ),
+                          TaskCardWidget(
+                            title: "Seventh Task Title ",
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -62,7 +65,8 @@ class HomePage extends StatelessWidget {
                       height: 60,
                       width: 60,
                       decoration: BoxDecoration(
-                          color: Color(0xff7349fe),
+                          gradient: LinearGradient(
+                              colors: [Color(0xff7349fe), Color(0xff7D49DF)]),
                           borderRadius: BorderRadius.circular(30)),
                       child:
                           Image(image: AssetImage("asset/images/add_icon.png")),
